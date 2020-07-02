@@ -39,11 +39,13 @@ class TabletPage extends Component {
                             <CardLoader numberOfCard={8} />
                         ) : (
                             this.state.tablets.map(({ id, name, thumbnailUrl, price: p }) => (
-                                <FadeIn className='card'>
-                                    <Card key={id} hoverable cover={<img alt={name} src={thumbnailUrl} />}>
-                                        <Meta title={`${name}`} description={`${parseInt(p).toLocaleString()}`} />
-                                    </Card>
-                                </FadeIn>
+                                <Link key={id} className='card'>
+                                    <FadeIn>
+                                        <Card hoverable cover={<img alt={name} src={thumbnailUrl} />}>
+                                            <Meta title={`${name}`} description={`${parseInt(p).toLocaleString()}`} />
+                                        </Card>
+                                    </FadeIn>
+                                </Link>
                             ))
                         )}
                     </div>

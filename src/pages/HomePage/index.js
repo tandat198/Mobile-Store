@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Card, Divider } from "antd";
 import axios from "axios";
+import { Link } from "react-router-dom";
 import FadeIn from "react-fade-in";
 import CardLoader from "../../components/CardLoader";
 
@@ -39,11 +40,13 @@ class HomePage extends Component {
                             <CardLoader numberOfCard={4} />
                         ) : (
                             phones.map(({ id, name, thumbnailUrl, price: p }) => (
-                                <FadeIn key={id} className='card'>
-                                    <Card hoverable cover={<img alt={name} src={thumbnailUrl} />}>
-                                        <Meta title={`${name}`} description={`${parseInt(p).toLocaleString()}`} />
-                                    </Card>
-                                </FadeIn>
+                                <Link key={id} className='card'>
+                                    <FadeIn>
+                                        <Card hoverable cover={<img alt={name} src={thumbnailUrl} />}>
+                                            <Meta title={`${name}`} description={`${parseInt(p).toLocaleString()}`} />
+                                        </Card>
+                                    </FadeIn>
+                                </Link>
                             ))
                         )}
                     </div>
@@ -58,11 +61,13 @@ class HomePage extends Component {
                             <CardLoader numberOfCard={4} />
                         ) : (
                             tablets.map(({ id, name, thumbnailUrl, price: p }) => (
-                                <FadeIn key={id} className='card'>
-                                    <Card hoverable cover={<img alt={name} src={thumbnailUrl} />}>
-                                        <Meta title={`${name}`} description={`${parseInt(p).toLocaleString()}`} />
-                                    </Card>
-                                </FadeIn>
+                                <Link key={id} className='card'>
+                                    <FadeIn>
+                                        <Card hoverable cover={<img alt={name} src={thumbnailUrl} />}>
+                                            <Meta title={`${name}`} description={`${parseInt(p).toLocaleString()}`} />
+                                        </Card>
+                                    </FadeIn>
+                                </Link>
                             ))
                         )}
                     </div>
