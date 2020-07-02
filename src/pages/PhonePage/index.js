@@ -19,6 +19,7 @@ class PhonePage extends Component {
         this.getPhones();
     }
     render() {
+        console.log(this.props);
         return (
             <div className='all-phones'>
                 <div className='container all-phones-container'>
@@ -36,11 +37,13 @@ class PhonePage extends Component {
                             <CardLoader numberOfCard={8} />
                         ) : (
                             this.state.phones.map(({ id, name, thumbnailUrl, price: p }) => (
-                                <FadeIn className='card'>
-                                    <Card key={id} hoverable cover={<img alt={name} src={thumbnailUrl} />}>
-                                        <Meta title={`${name}`} description={`${parseInt(p).toLocaleString()}`} />
-                                    </Card>
-                                </FadeIn>
+                                <Link to={`/phones/${id}`} key={id} className='card'>
+                                    <FadeIn>
+                                        <Card key={id} hoverable cover={<img alt={name} src={thumbnailUrl} />}>
+                                            <Meta title={`${name}`} description={`${parseInt(p).toLocaleString()}`} />
+                                        </Card>
+                                    </FadeIn>
+                                </Link>
                             ))
                         )}
                     </div>

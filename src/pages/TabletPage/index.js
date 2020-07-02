@@ -27,10 +27,10 @@ class TabletPage extends Component {
                 <div className='container all-tablets-container'>
                     <Breadcrumb>
                         <Breadcrumb.Item>
-                            <Link href='/'>Trang chủ</Link>
+                            <Link to='/'>Trang chủ</Link>
                         </Breadcrumb.Item>
                         <Breadcrumb.Item>
-                            <Link href='/tablets'>Tablet</Link>
+                            <Link to='/tablets'>Tablet</Link>
                         </Breadcrumb.Item>
                     </Breadcrumb>
                     <Divider />
