@@ -33,12 +33,19 @@
 .phones-container,
 .tablets-container {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
 
     .card {
-        width: 23%;
-        margin-bottom: 3rem;
+        width: 22.75%;
+        margin: 0 1.5% 3rem;
+    }
+
+    .card:nth-child(4n-3) {
+        margin-left: 0;
+    }
+
+    .card:nth-child(4n) {
+        margin-right: 0;
     }
 }
 
