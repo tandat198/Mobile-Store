@@ -11,26 +11,15 @@ class ProductInfoPage extends Component {
     };
 
     getProduct = async () => {
-        let res;
-        let product;
         const {
             params: { productId },
-            path,
         } = this.props.match;
+        let product;
+        let res;
 
         this.setState({ isLoading: true });
-        switch (true) {
-            case path.includes("phones"):
-                res = await axios.get(`https://crm-dnt.herokuapp.com/api/products/${productId}`);
-                product = res.data;
-                break;
-            case path.includes("tablets"):
-                res = await axios.get(`https://crm-dnt.herokuapp.com/api/products/${productId}`);
-                product = res.data;
-                break;
-            default:
-                break;
-        }
+        res = await axios.get(`https://crm-dnt.herokuapp.com/api/products/${productId}`);
+        product = res.data;
 
         this.setState({ product, isLoading: false });
     };
