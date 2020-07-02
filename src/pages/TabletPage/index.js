@@ -15,7 +15,7 @@ class TabletPage extends Component {
 
     getTablets = () => {
         this.setState({ isLoading: true });
-        axios.get("https://crm-dnt.herokuapp.com/api/products?category=tablet&pageSize=4&pageIndex=1").then((res) => this.setState({ tablets: res.data, isLoading: false }));
+        axios.get("https://crm-dnt.herokuapp.com/api/products?category=tablet&pageSize=8").then((res) => this.setState({ tablets: res.data, isLoading: false }));
     };
 
     componentDidMount() {
