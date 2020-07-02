@@ -39,7 +39,7 @@ class TabletPage extends Component {
                             <CardLoader numberOfCard={8} />
                         ) : (
                             this.state.tablets.map(({ id, name, thumbnailUrl, price: p }) => (
-                                <Link key={id} className='card'>
+                                <Link to={`/tablets/${id}`} key={id} className='card'>
                                     <FadeIn>
                                         <Card hoverable cover={<img alt={name} src={thumbnailUrl} />}>
                                             <Meta title={`${name}`} description={`${parseInt(p).toLocaleString()}`} />
