@@ -4,16 +4,18 @@ import FadeIn from "react-fade-in";
 import Meta from "antd/lib/card/Meta";
 
 class TabletPage extends Component {
+    state = { tablets: [] };
+
     render() {
         return (
             <div className='all-tablets'>
                 <div className='container all-tablets-container'>
                     <Breadcrumb>
                         <Breadcrumb.Item>
-                            <a href='/'>Home</a>
+                            <a href='/'>Trang chủ</a>
                         </Breadcrumb.Item>
                         <Breadcrumb.Item>
-                            <a href='/tablets'>Tablets</a>
+                            <a href='/tablets'>Tablet</a>
                         </Breadcrumb.Item>
                     </Breadcrumb>
                     <Divider />

@@ -4,16 +4,18 @@ import FadeIn from "react-fade-in";
 import Meta from "antd/lib/card/Meta";
 
 class PhonePage extends Component {
+    state = { phones: [] };
+
     render() {
         return (
             <div className='all-phones'>
                 <div className='container all-phones-container'>
                     <Breadcrumb>
                         <Breadcrumb.Item>
-                            <a href='/'>Home</a>
+                            <a href='/'>Trang chủ</a>
                         </Breadcrumb.Item>
                         <Breadcrumb.Item>
-                            <a href='/phones'>Phones</a>
+                            <a href='/phones'>Điện thoại</a>
                         </Breadcrumb.Item>
                     </Breadcrumb>
                     <Divider />
